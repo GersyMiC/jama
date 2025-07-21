@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/myPlacesFragment"
+        android:icon="@drawable/ic_restaurant"
+        android:title="Mis Negocios" />
+    <item
+        android:id="@+id/registerPlaceFragment"
+        android:icon="@drawable/ic_map"
+        android:title="Registrar" />
+    <item
+        android:id="@+id/ownerProfileFragment"
+        android:icon="@drawable/ic_person"
+        android:title="Perfil" />
+</menu>

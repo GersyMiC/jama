@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "15598108345",
+    "project_id": "jama-app-comida",
+    "storage_bucket": "jama-app-comida.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:15598108345:android:0f8a4295d2c2745bf8a568",
+        "android_client_info": {
+          "package_name": "com.example.jama_fv"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB54zNfnBFMiCBgLrQ4NZx2RC6fws9-4Nw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

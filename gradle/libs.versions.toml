@@ -1,0 +1,76 @@
+# gradle/libs.versions.toml
+
+[versions]
+# Versiones de librerías AndroidX y Material
+coreKtx = "1.13.1" # Verifica esta versión con la más reciente si no la tienes
+appcompat = "1.7.0" # Verifica esta versión con la más reciente si no la tienes
+material = "1.12.0" # <-- ¡Añade esta línea con la versión correcta!
+navigation = "2.7.7" # Verifica esta versión con la más reciente si no la tienes
+espressoCore = "3.6.1" # Verifica esta versión con la más reciente si no la tienes
+
+# Versiones de Kotlin y sus librerías
+kotlin = "2.1.0" # Asegúrate de que esta versión sea correcta para tu proyecto
+kotlinxCoroutines = "1.8.0" # O la versión que prefieras para coroutines, si es diferente de 'kotlin'
+
+# Versiones de librerías de prueba
+junit = "4.13.2" # Versión para JUnit 4
+testJunit = "1.2.1" # Versión para androidx.test.ext:junit
+
+# Versiones de Google Play Services y Firebase
+playServicesLocation = "21.0.1" # O la versión que uses
+playServicesMaps = "18.2.0"     # O la versión que uses
+play-services-maps-version = "18.2.0"
+play-services-location-version = "21.0.1"
+firebaseBom = "32.7.3" # Versión del Firebase BOM
+
+# Versiones de Glide
+glide = "4.16.0"
+
+# Versiones de plugins
+agp = "8.10.1" # Android Gradle Plugin version. Verifica con la tuya.
+googleServicesPlugin = "4.4.3" # Google Services plugin version
+
+
+[libraries]
+# AndroidX y Material
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" } # <-- Ahora esta referencia debería funcionar
+
+androidx-navigation-fragment-ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigation" }
+androidx-navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigation" }
+
+# Pruebas
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "testJunit" }
+androidx-espresso-core = { group = "androidx.espresso", name = "espresso-core", version.ref = "espressoCore" }
+
+# ViewModel y LiveData (Android Architecture Components)
+androidx-lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version = "2.8.1" }
+androidx-lifecycle-livedata-ktx = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version = "2.8.1" }
+androidx-fragment-ktx = { group = "androidx.fragment", name = "fragment-ktx", version = "1.7.1" }
+
+# Coroutines (¡Alinea con la versión de Kotlin!)
+kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "kotlinxCoroutines" } # Usamos 'kotlinxCoroutines' aquí
+kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "kotlinxCoroutines" } # Y aquí
+
+# Firebase y mapas
+play-services-maps = { group = "com.google.android.gms", name = "play-services-maps", version.ref = "play-services-maps-version" }
+play-services-location = { group = "com.google.android.gms", name = "play-services-location", version.ref = "play-services-location-version" }
+firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebaseBom" } # Definir el BOM si lo quieres como alias
+firebase-firestore-ktx = { group = "com.google.firebase", name = "firebase-firestore-ktx" } # Sin versión si usas BOM
+firebase-auth-ktx = { group = "com.google.firebase", name = "firebase-auth-ktx" } # Sin versión si usas BOM
+firebase-storage-ktx = { group = "com.google.firebase", name = "firebase-storage-ktx" } # Sin versión si usas BOM
+
+# Glide
+glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
+glide-compiler = { group = "com.github.bumptech.glide", name = "compiler", version.ref = "glide" }
+
+
+
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+google-services = { id = "com.google.gms.google-services", version.ref = "googleServicesPlugin" } # Usar version.ref
+kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }

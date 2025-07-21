@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorLight">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="24dp">
+
+        <ImageView
+            android:id="@+id/iv_place_image"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_jama_logo"
+            android:layout_marginBottom="16dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:minHeight="48dp"
+            android:weightSum="2"
+            android:layout_marginBottom="15dp"
+            android:padding="0dp">
+
+            <Spinner
+                android:id="@+id/spinner_tipo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:minHeight="48dp" />
+
+            <Button
+                android:id="@+id/btn_select_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginLeft="30dp"
+                android:text="Seleccionar imagen"
+                android:background="@drawable/button_primary"
+                android:textColor="@color/colorWhite"/>
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/et_nombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre del lugar"
+            android:layout_marginBottom="15dp"
+            android:minHeight="48dp"
+            android:background="@drawable/edittext_underline"/>
+
+        <EditText
+            android:id="@+id/et_descripcion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Descripcion"
+            android:layout_marginBottom="15dp"
+            android:minHeight="48dp"
+            android:background="@drawable/edittext_underline"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="8"
+            android:minHeight="48dp"
+            android:layout_marginBottom="15dp"
+            android:padding="0dp">
+
+            <TextView
+                android:text="Horario:"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:layout_marginStart="3dp"
+                android:gravity="center_vertical"
+                android:textSize="18sp"
+                android:minHeight="48dp"/>
+
+            <EditText
+                android:id="@+id/editTextHoraInicio"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:hint="Inicio"
+                android:gravity="center"
+                android:minHeight="48dp"
+                android:layout_marginEnd="5dp"
+                android:inputType="text"       android:focusable="true"      android:clickable="true"      android:focusableInTouchMode="true"
+                android:background="@drawable/edittext_underline"/>
+
+            <EditText
+                android:id="@+id/editTextHoraFin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:hint="Fin"
+                android:gravity="center"
+                android:minHeight="48dp"
+                android:layout_marginStart="5dp"
+                android:inputType="text"       android:focusable="true"      android:clickable="true"      android:focusableInTouchMode="true"
+                android:background="@drawable/edittext_underline"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="8"
+            android:minHeight="48dp"
+            android:layout_marginBottom="15dp"
+            android:padding="0dp">
+
+            <TextView
+                android:text="Precios:"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:layout_marginStart="3dp"
+                android:gravity="center_vertical"
+                android:textSize="18sp"
+                android:minHeight="48dp"/>
+
+            <EditText
+                android:id="@+id/et_precio_min"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:hint="Min"
+                android:inputType="numberDecimal"
+                android:gravity="center"
+                android:minHeight="48dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/edittext_underline"/>
+
+            <EditText
+                android:id="@+id/et_precio_max"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:hint="Max"
+                android:inputType="numberDecimal"
+                android:gravity="center"
+                android:minHeight="48dp"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/edittext_underline"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_ubicacion_seleccionada"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ubicación: No seleccionada"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:textSize="16sp"/>
+
+        <Button
+            android:id="@+id/btn_seleccionar_ubicacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Seleccionar Ubicación en el Mapa"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/button_primary"
+            android:textColor="@color/colorWhite"/>
+
+        <Button
+            android:id="@+id/btn_guardar_negocio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Guardar Negocio"
+            android:background="@drawable/button_primary"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+</ScrollView>

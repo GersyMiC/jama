@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Permisos necesarios para la aplicación -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.JAMA_FV"
+        tools:targetApi="31">
+
+        <!-- METADATA DE GOOGLE MAPS API KEY (¡AHORA DENTRO DE <application>!) -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDMFT9UN3RRIIC4rJHkq8Y7vFNj04b7SIs" />
+
+        <!-- Actividad de Login (¡Punto de entrada principal!) -->
+        <activity
+            android:name=".ui.auth.LoginActivity"
+            android:exported="true"> <!-- IMPRESCINDIBLE para Android 12+ y para ser lanzada -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Actividad de Registro -->
+        <activity
+            android:name=".ui.auth.RegisterActivity"
+            android:exported="false" /> <!-- Generalmente false para actividades internas -->
+
+        <!-- Actividad principal del cliente -->
+        <activity
+            android:name=".ui.client.ClientMainActivity"
+            android:exported="false" />
+
+        <!-- Actividad principal del propietario -->
+        <activity
+            android:name=".ui.owner.OwnerMainActivity"
+            android:exported="false" />
+
+        <!-- Actividad para la selección de ubicación en el mapa -->
+        <activity
+            android:name=".ui.map.MapPickerActivity"
+            android:exported="false" />
+
+        <!-- Si tuvieras una RegisterPlaceActivity (no fragment), iría aquí -->
+        <!-- <activity
+            android:name=".ui.owner.RegisterPlaceActivity"
+            android:exported="false" /> -->
+
+    </application> <!-- ¡Etiqueta de cierre de application añadida! -->
+
+</manifest>

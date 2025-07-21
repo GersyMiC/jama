@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#c96c00</color>
+    <color name="colorSecondary">#ed8900</color>
+    <color name="colorAccent">#fdbc44</color>
+    <color name="colorSurface">#ffc548</color>
+    <color name="colorBackground">#fed36c</color>
+    <color name="colorLight">#FFFFFF</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorTextPrimary">#c96c00</color>
+    <color name="colorTextSecondary">#ed8900</color>
+
+<style name="CustomRatingBarTheme" parent="ThemeOverlay.AppCompat.Light">
+    <item name="colorControlActivated">#ed8900</item> <!-- Color de estrellas activas -->
+</style>
+
+</resources>

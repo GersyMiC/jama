@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/owner_nav_graph"
+    app:startDestination="@id/myPlacesFragment">
+
+    <fragment
+        android:id="@+id/myPlacesFragment"
+        android:name="com.example.jama_fv.ui.owner.MyPlacesFragment"
+        android:label="Mis Negocios"
+        tools:layout="@layout/fragment_my_places" >
+        <action
+            android:id="@+id/action_myPlacesFragment_to_registerPlaceFragment"
+            app:destination="@id/registerPlaceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerPlaceFragment"
+        android:name="com.example.jama_fv.ui.owner.RegisterPlaceFragment"
+        android:label="Registrar Negocio"
+        tools:layout="@layout/fragment_register_place" />
+    <fragment
+        android:id="@+id/ownerProfileFragment"
+        android:name="com.example.jama_fv.ui.client.OwnerProfileFragment"
+        android:label="Mi Perfil (Dueño)"
+        tools:layout="@layout/fragment_owner_profile" />
+
+</navigation>
